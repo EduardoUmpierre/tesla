@@ -10,12 +10,21 @@
         <link rel="stylesheet" type="text/css" href="css/style.min.css">
     </head>
     <body>
+        <nav id="menu">
+            <ul>
+                <li class="active"><a href="#home"><span class="dot"></span></a></li>
+                <li><a href="#gallery"><span class="dot"></span></a></li>
+                <li><a href="#technology"><span class="dot"></span></a></li>
+                <li><a href="#video"><span class="dot"></span></a></li>
+            </ul>
+        </nav>
+
         <section id="home">
             <h1>
                 <a href="#"><span class="sprite logo">Tesla</span></a>
             </h1>
 
-            <a href="#"><span class="home-arrow sprite arrow"></span></a>
+            <a href="#gallery"><span class="home-arrow sprite arrow"></span></a>
         </section>
 
         <section id="gallery">
@@ -83,5 +92,58 @@
                 </ul>
             </div>
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            // Cache selectors
+            var lastId,
+            topMenu = $("#menu"),
+            topMenuHeight = topMenu.outerHeight()+15,
+            // All list items
+            menuItems = topMenu.find("a"),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function() {
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+            });
+
+            // Bind click handler to menu items
+            // so we can get a fancy scroll animation
+            menuItems.click(function(e){
+            var href = $(this).attr("href"),
+                offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+
+            $('html, body').stop().animate({
+                  scrollTop: offsetTop
+                }, 300);
+
+                e.preventDefault();
+            });
+
+            // Bind to scroll
+            $(window).scroll(function(){
+                // Get container scroll position
+                var fromTop = $(this).scrollTop()+topMenuHeight;
+
+                // Get id of current scroll item
+                var cur = scrollItems.map(function(){
+                 if ($(this).offset().top < fromTop)
+                   return this;
+                });
+
+                // Get the id of the current element
+                cur = cur[cur.length-1];
+                var id = cur && cur.length ? cur[0].id : "";
+
+                if (lastId !== id) {
+                    lastId = id;
+                    // Set/remove active class
+                    menuItems
+                        .parent().removeClass("active")
+                        .end().filter("[href='#"+id+"']").parent().addClass("active");
+                }
+            });
+        </script>
     </body>
 </html>

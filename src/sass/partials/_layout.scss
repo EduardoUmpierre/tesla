@@ -75,6 +75,37 @@ section,
     }
 }
 
+// Menu
+#menu {
+    position: fixed;
+    right: 27px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+
+    & > ul {
+        list-style: none;
+
+        & > li {
+            margin-bottom: 5px;
+
+            &:last-child {margin-bottom: 0;}
+
+            .dot {
+                background-color: #bdbdbe;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                display: block;
+                height: 9px;
+                width: 9px;
+            }
+
+            &.active .dot {background-color: #e31937;}
+        }
+    }
+}
+
 // Home
 #home {
     background: url("../img/tesla-promo.jpg") center no-repeat;

@@ -77,6 +77,29 @@ section,
   .content > p:last-child {
     margin-bottom: 0; }
 
+#menu {
+  position: fixed;
+  right: 27px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1; }
+  #menu > ul {
+    list-style: none; }
+    #menu > ul > li {
+      margin-bottom: 5px; }
+      #menu > ul > li:last-child {
+        margin-bottom: 0; }
+      #menu > ul > li .dot {
+        background-color: #bdbdbe;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        display: block;
+        height: 9px;
+        width: 9px; }
+      #menu > ul > li.active .dot {
+        background-color: #e31937; }
+
 #home {
   background: url("../img/tesla-promo.jpg") center no-repeat;
   background-size: cover;
