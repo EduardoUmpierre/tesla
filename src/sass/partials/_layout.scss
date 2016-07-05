@@ -5,7 +5,11 @@
     box-sizing: border-box;
 }
 
-ul {list-style: none;}
+ul {
+    list-style: none;
+
+    a {outline: none;}
+}
 
 ul,
 html,
@@ -26,12 +30,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+header,
 footer,
 section {
     float: left;
     width: 100%;
 }
 
+header,
 section {overflow: hidden;}
 
 .container {

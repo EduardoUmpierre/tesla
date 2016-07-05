@@ -13,6 +13,8 @@
 
 ul {
   list-style: none; }
+  ul a {
+    outline: none; }
 
 ul,
 html,
@@ -32,11 +34,13 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased; }
 
+header,
 footer,
 section {
   float: left;
   width: 100%; }
 
+header,
 section {
   overflow: hidden; }
 
