@@ -1,0 +1,153 @@
+@media screen and (min-width: 992px) {
+    #home {
+        &::after {
+            bottom: 0;
+            border-bottom: 63px solid #ebebeb;
+            border-right: 100vw solid transparent;
+            content: "";
+            position: absolute;
+        }
+    }
+
+    #gallery {
+        min-height: 680px;
+        padding: 135px 0 240px;
+        position: relative;
+
+        &::after,
+        & > .gallery::after {
+            content: "";
+            left: 0;
+            position: absolute;
+        }
+
+        &::after {
+            bottom: 0;
+            border-bottom: 155px solid #FFF;
+            border-left: 100vw solid transparent;
+            z-index: 1;
+        }
+
+        & > .gallery {
+            height: 644px;
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+            top: 0;
+            width: 823px;
+
+            .owl-controls {bottom: 100px;}
+
+            &::after {
+                top: 0;
+                background: url("../img/gallery.png") no-repeat;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    #technology {
+        .content {padding-top: 185px;}
+
+        img {
+            float: right;
+            margin-left: 115px;
+        }
+    }
+
+    #video {
+        background: url("../img/bg-video.jpg") center top no-repeat;
+        background-size: cover;
+        padding: 280px 0 168px;
+
+        .video-embed {float: left;}
+        .content {margin-top: 35px;}
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #gallery > .gallery {
+        width: 723px;
+        height: auto;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #gallery > .gallery {
+        width: 523px;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {padding: 0 15px;}
+
+    .content {padding: 40px 0 80px;}
+        .content.right {width: 100%;}
+
+    h2 {text-align: center;}
+
+    #video,
+    #gallery,
+    #technology {padding-top: 40px;}
+
+    // Gallery
+    #gallery > .gallery {
+        margin: 0;
+        width: auto;
+
+        .owl-controls {bottom: 20px;}
+    }
+
+    // Technology
+    #technology img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    // Video
+    #video {
+        background-color: #ebebeb;
+
+        .video-embed > iframe {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    // Video
+    #video .video-embed > iframe {
+        height: 230px;
+    }
+
+    // Footer
+    footer {
+        padding: 20px 0;
+        text-align: center;
+
+        .logo-small {
+            display: inline-block;
+            float: none;
+
+            & + span {
+                display: block;
+                margin: 15px 0;
+            }
+        }
+
+        ul {
+            float: none;
+
+            & > li {
+                display: inline-block;
+                float: none;
+            }
+        }
+    }
+}
