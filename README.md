@@ -29,5 +29,5 @@ And the Gulp application will run all the tasks to concatenate the CSS, JS and H
  - src
 
 
- - In `dist` is located the production files.
- - In `src` is located the dev files.
+ In `dist` is located the production files.
+ In `src` is located the dev files.
