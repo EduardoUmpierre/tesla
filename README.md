@@ -1,17 +1,33 @@
 # Tesla
-Repositório do teste com a página inicial da Tesla
+Single page for the Tesla website
 
-### GULP.JS
-O gulp compila os estilos SASS, além de concatenar e minificar os arquivos CSS, JS e HTML.
 
-##### Como instalar
-Com o NPM (Node.js) instalado, acessar a pasta do projeto e rodar o comando `npm install`.
+# Dependencies
+ - NodeJS
+ - Gulp
 
-##### Como executar
-Na pasta do projeto, rodar o comando `gulp`
+To compile the SASS file and to run the other configurations from the Gulp, you will need to have NodeJS > 6.*
 
-### Arquivos de produção
-Os arquivos de produção estão na pasta **dist**.
+## Instalation
 
-### Arquivos de desenvolvimento
-Os arquivos de desenvolvimento estão na pasta **src**.
+In your terminal, run `$ npm -v` to check the correct version of the NPM. If you do not have NPM installed, just run this command in your terminal: `npm install`
+
+## How to compile
+
+In the same window in your terminal, run the following command:
+
+
+$ gulp
+
+
+And the Gulp application will run all the tasks to concatenate the CSS, JS and HTML. Generate from SASS to CSS and so on.
+
+# Folder structure
+
+
+ - dist
+ - src
+
+
+ - In `dist` is located the production files.
+ - In `src` is located the dev files.
