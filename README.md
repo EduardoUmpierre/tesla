@@ -12,3 +12,6 @@ Na pasta do projeto, rodar o comando `gulp`
 
 ### Arquivos de produção
 Os arquivos de produção estão na pasta **dist**.
+
+### Arquivos de desenvolvimento
+Os arquivos de desenvolvimento estão na pasta **src**.
